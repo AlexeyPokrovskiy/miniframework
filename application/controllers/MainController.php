@@ -7,7 +7,9 @@ use application\core\Controller;
 class MainController extends Controller {
 
     public  function indexAction(){
-      $this->view->render("Главная");
+      $this->view->render("Главная",array(
+          'name'=>"Alex"
+      ));
     }
 
 }

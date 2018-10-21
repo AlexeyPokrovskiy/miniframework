@@ -32,18 +32,18 @@ class Router{
         if($this->match()) {
             $path = "application\controllers\\" . ucfirst($this->params['controller']) . "Controller";
             if (class_exists($path)) {
-                $action = $this->params['action'] . "Action";
+                $action = $this->params['action']. "Action";
                 if (method_exists($path, $action)) {
                     $controller=new $path($this->params);
                     $controller->$action();
                 } else {
-                    echo "No action ".$action;
+                   View::errorCode(404);
                 }
             } else {
-                echo "No controller ".$path;
+                View::errorCode(404);
             }
         }else{
-            echo "no path";
+            View::errorCode(404);
         }
     }
 

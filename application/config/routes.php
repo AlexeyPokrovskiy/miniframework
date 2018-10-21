@@ -3,7 +3,7 @@
 return [
     ""=>[
         'controller'=>'main',
-        'action'=>'index  ',
+        'action'=>'index',
     ],
     'account/login'=>[
         'controller'=>'account',

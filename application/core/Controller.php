@@ -11,7 +11,14 @@ abstract class Controller{
     {
         $this->routs = $routs;
         $this->view  = new View($routs);
+        $this->model = $this->loadModel($routs['controller']);
     }
 
+    public function loadModel($name){
+        $path="application\models\\".ucfirst($name);
+        if(class_exists($path)){
+            return new $path;
+        }
+    }
 }
 ?>
