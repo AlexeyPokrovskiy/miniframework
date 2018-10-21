@@ -18,7 +18,6 @@
                 <input type="email" class="form-control" name="email" placeholder="Эл.почта" value="">
                 <label for="">Изображение</label>
                 <input type="file" name="image" value="">
-
                 <br>
                 <input type="submit" value="Отправить" class="btn btn-success">
                 <input class="btn btn-default" type='reset' value='Очистить' name='reset'>

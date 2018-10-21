@@ -8,7 +8,7 @@ class MainController extends Controller {
 
     public  function indexAction(){
       $this->view->render("Главная",array(
-          'name'=>"Alex"
+         "tasks"=>$this->model->showAllTask()
       ));
     }
     public  function createAction(){
@@ -21,8 +21,11 @@ class MainController extends Controller {
           $message=$this->model->createTask($_POST);
           exit(json_encode(['message'=>$message]));
       }
-
-
+    }
+    public  function showAction(){
+        $this->view->render("Просмотр задания",array(
+            "task"=>$this->model->getTask($this->routs['id'])[0]
+        ));
     }
 
 }

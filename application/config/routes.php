@@ -13,10 +13,34 @@ return [
         'controller'=>'main',
         'action'=>'save',
     ],
+    'show/{id:\d+}'=>[
+        'controller'=>'main',
+        'action'=>'show',
+    ],
+    'update'=>[
+        'controller'=>'account',
+        'action'=>'update',
+    ],
     'account/login'=>[
         'controller'=>'account',
         'action'=>'login',
         ],
+    'account/logout'=>[
+        'controller'=>'account',
+        'action'=>'logout',
+    ],
+    'account/edit/{id:\d+}'=>[
+        'controller'=>'account',
+        'action'=>'edit',
+    ],
+    'account/auth'=>[
+        'controller'=>'account',
+        'action'=>'auth',
+    ],
+    'account/dashboard'=>[
+        'controller'=>'account',
+        'action'=>'dashboard',
+    ],
 
 ];
 ?>

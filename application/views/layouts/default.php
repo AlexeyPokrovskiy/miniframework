@@ -36,17 +36,19 @@
 
                 <div class="collapse navbar-collapse " >
                     <!-- Left Side Of Navbar -->
+
                     <ul class="nav navbar-nav nav-menu">
+                        <li> <a href="/create" class="btn btn-success">Создать задачу</a></li>
                         <?if(!empty($_SESSION['log'])):?>
                         <li>
-                            <a href="admin/">Привет, <?=$_SESSION['log'];?></a>
+                            <a href="/account/dashboard/">Привет, <?=$_SESSION['log'];?></a>
                         </li>
                         <li>
-                            <a href="account/logout">Выход</a>
+                            <a href="/account/logout/">Выход</a>
                         </li>
                         <?else:?>
                         <li>
-                            <a href="account/login">Вход</a>
+                            <a href="/account/login/">Вход</a>
                         </li>
                         <?endif;?>
                     </ul>
