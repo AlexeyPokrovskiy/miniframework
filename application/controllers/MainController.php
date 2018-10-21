@@ -11,6 +11,19 @@ class MainController extends Controller {
           'name'=>"Alex"
       ));
     }
+    public  function createAction(){
+        $this->view->render("Создать задачу",array(
+
+        ));
+    }
+    public  function saveAction(){
+      if(!empty($_POST)){
+          $message=$this->model->createTask($_POST);
+          exit(json_encode(['message'=>$message]));
+      }
+
+
+    }
 
 }
 ?>
